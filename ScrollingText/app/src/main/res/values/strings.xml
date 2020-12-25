@@ -24,4 +24,5 @@
         wrap around to the next line—they extend beyond the right margin. This is the correct behavior—each new line of text starting at the left margin represents
         an entire paragraph. If you want the text in strings.xml to be wrapped, you can press Return to enter hard line endings, or format the text first in a text
         editor with hard line endings. </string>
+    <string name="add_comment">Add Comment</string>
 </resources>

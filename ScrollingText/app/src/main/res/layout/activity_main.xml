@@ -15,15 +15,16 @@
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="@color/white"
         android:textStyle="bold" />
+
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_below="@id/article_heading"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_heading">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
             <TextView
@@ -37,13 +38,18 @@
 
 
             <TextView
-            android:id="@+id/article"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/article_subheading"
-            android:lineSpacingExtra="6sp"
-            android:padding="@dimen/padding_regular"
-            android:text="@string/article_text" />
+                android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="6sp"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/article_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_regular"
+                android:text="@string/add_comment" />
 
         </LinearLayout>
 
