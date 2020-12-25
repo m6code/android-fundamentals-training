@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Scrolling Text</string>
+    <string name="article_title">Article Title</string>
+    <string name="article_subtitle">Article Subtitle</string>
+    <string name="article_text">You can use the text in your text file,
+        or use the text provided for the article_text string in the strings
+        .xml file of the finished ScrollingText app. The only requirement for this task is that the text must be long enough so that it doesn\'t
+        fit on the screen.Keep in mind the following (refer to the figure below for an example):As you enter or paste text in the strings.xml file,
+        the text lines don\'t wrap around to the next line—they extend beyond the right margin. This is the correct behavior—each new line of text starting
+        at the left margin represents an entire paragraph. If you want the text in strings.xml to be wrapped, you can press Return to enter hard line endings,
+        or format the text first in a text editor with hard line endings. <b>You can use the text in your text file,</b> or use the text provided for the
+        article_text string in the strings.xml file of the finished ScrollingText app. The only requirement for this task is that the text must be long enough
+        so that it doesn\'t fit on the screen.Keep in mind the following (refer to the figure below for an example):As you enter or paste text in the strings.xml
+        file, the text lines don\'t wrap around to the next line—they extend beyond the right margin. This is the correct behavior—each new line of text starting
+        at the left margin represents an entire paragraph. If you want the text in strings.xml to be wrapped, you can press Return to enter hard line endings, or
+        format the text first in a text editor with <i>hard line endings.</i> You can use the text in your text file, or use the text provided for the article_text
+        string in the strings.xml file of the finished ScrollingText app. The only requirement for this task is that the text must be long enough so that it
+        doesn\'t fit on the screen.Keep in mind the following (refer to the figure below for an example):As you enter or paste text in the strings.xml file, the text
+        lines don\'t wrap around to the next line—they extend beyond the right margin. This is the correct behavior—each new line of text starting at the left
+        margin represents an entire paragraph. If you want the text in strings.xml to be wrapped, you can press Return to enter hard line endings, or format the text
+        first in a text editor with hard line endings. www.rockument.com You can use the text in your text file, or use the text provided for the article_text string
+        in the strings.xml file of the finished ScrollingText app. The only requirement for this task is that the text must be long enough so that it doesn\'t fit on th
+        e screen.Keep in mind the following (refer to the figure below for an example):As you enter or paste text in the strings.xml file, the text lines don\'t
+        wrap around to the next line—they extend beyond the right margin. This is the correct behavior—each new line of text starting at the left margin represents
+        an entire paragraph. If you want the text in strings.xml to be wrapped, you can press Return to enter hard line endings, or format the text first in a text
+        editor with hard line endings. </string>
+</resources>
