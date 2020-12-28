@@ -12,15 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:lineSpacingExtra="6dp"
-            android:padding="8dp"
-            android:text="@string/long_text"
-            android:textSize="22sp" />
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:lineSpacingExtra="6dp"-->
+<!--            android:padding="8dp"-->
+<!--            android:text="@string/long_text"-->
+<!--            android:textSize="22sp" />-->
 
     </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/content_main"/>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppbar"
