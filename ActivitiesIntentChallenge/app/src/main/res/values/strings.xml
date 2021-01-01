@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ActivitiesIntent Challenge</string>
+    <string name="text_one">Text One</string>
+    <string name="text_two">Text Two</string>
+    <string name="text_three">Text Three</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="send">Send</string>
+    <string name="message_received">Message Received</string>
+    <string name="reply">Reply</string>
+    <string name="text_header_reply">Reply Received</string>
+</resources>
