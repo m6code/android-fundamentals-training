@@ -2,6 +2,7 @@ package com.m6code.activitiesintentchallenge;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,31 +11,34 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
-    public static final String REPLY = "com.m6code.activitiesintentchallenge.extras.REPLY";
     private static final String TAG = SecondActivity.class.getSimpleName();
-    private TextView mMessageReceived;
-    private EditText mEditTextReply;
-    private Button mButtonReply;
+    private TextView mTextViewPassage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        mMessageReceived = findViewById(R.id.textView_message);
-        mEditTextReply = findViewById(R.id.editText_reply_msg);
-        mButtonReply = findViewById(R.id.button_reply);
-
+        mTextViewPassage = findViewById(R.id.textView_passage);
 
         Intent intent = getIntent();
-        String msg = intent.getStringExtra(MainActivity.MESSAGE);
-        mMessageReceived.setText(msg);
+        String passage = intent.getStringExtra(MainActivity.PASSAGE);
+
+        Log.d(TAG, "onCreate: passage = " + passage);
+        switch (passage) {
+            case MainActivity.BTONE:
+                mTextViewPassage.setText(R.string.passage_one);
+                break;
+            case MainActivity.BTWO:
+                mTextViewPassage.setText(R.string.passage_two);
+                break;
+            case MainActivity.BTHREE:
+                mTextViewPassage.setText(R.string.passage_three);
+                break;
+            default:
+                mTextViewPassage.setText(R.string.error);
+                break;
+        }
+
     }
 
-    public void sendReply(View view) {
-        String reply = mEditTextReply.getText().toString();
-        Intent reIntent = new Intent();
-        reIntent.putExtra(REPLY, reply);
-        setResult(RESULT_OK, reIntent);
-        finish();
-    }
 }

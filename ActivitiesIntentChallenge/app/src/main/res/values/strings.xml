@@ -8,4 +8,125 @@
     <string name="message_received">Message Received</string>
     <string name="reply">Reply</string>
     <string name="text_header_reply">Reply Received</string>
+    <string name="passage_one">
+        Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture. Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.Part 1 describes the basic introductory concepts necessary for a good understanding
+of database models, systems, and languages. Chapters 1 and 2 introduce databases,
+typical users, and DBMS concepts, terminology, and architecture.
+    </string>
+    <string name="passage_two">
+        Part 2 describes the relational data model, the SQL standard, and the formal relational
+languages. Chapter 3 describes the basic relational model, its integrity constraints,
+and update operations. Chapter 4 describes some of the basic parts of the
+SQL standard for relational databases, including data definition, data modification
+operations, and simple SQL queries. Chapter 5 presents more complex SQL queries,
+as well as the SQL concepts of triggers, assertions, views, and schema modification.
+Chapter 6 describes the operations of the relational algebra and introduces the relational
+calculus.
+        Part 2 describes the relational data model, the SQL standard, and the formal relational
+languages. Chapter 3 describes the basic relational model, its integrity constraints,
+and update operations. Chapter 4 describes some of the basic parts of the
+SQL standard for relational databases, including data definition, data modification
+operations, and simple SQL queries. Chapter 5 presents more complex SQL queries,
+as well as the SQL concepts of triggers, assertions, views, and schema modification.
+Chapter 6 describes the operations of the relational algebra and introduces the relational
+calculus.Part 2 describes the relational data model, the SQL standard, and the formal relational
+languages. Chapter 3 describes the basic relational model, its integrity constraints,
+and update operations. Chapter 4 describes some of the basic parts of the
+SQL standard for relational databases, including data definition, data modification
+operations, and simple SQL queries. Chapter 5 presents more complex SQL queries,
+as well as the SQL concepts of triggers, assertions, views, and schema modification.
+Chapter 6 describes the operations of the relational algebra and introduces the relational
+calculus.Part 2 describes the relational data model, the SQL standard, and the formal relational
+languages. Chapter 3 describes the basic relational model, its integrity constraints,
+and update operations. Chapter 4 describes some of the basic parts of the
+SQL standard for relational databases, including data definition, data modification
+operations, and simple SQL queries. Chapter 5 presents more complex SQL queries,
+as well as the SQL concepts of triggers, assertions, views, and schema modification.
+Chapter 6 describes the operations of the relational algebra and introduces the relational
+calculus.Part 2 describes the relational data model, the SQL standard, and the formal relational
+languages. Chapter 3 describes the basic relational model, its integrity constraints,
+and update operations. Chapter 4 describes some of the basic parts of the
+SQL standard for relational databases, including data definition, data modification
+operations, and simple SQL queries. Chapter 5 presents more complex SQL queries,
+as well as the SQL concepts of triggers, assertions, views, and schema modification.
+Chapter 6 describes the operations of the relational algebra and introduces the relational
+calculus.
+    </string>
+    <string name="passage_three">
+        Part 3 covers several topics related to conceptual database modeling and database
+design. In Chapter 7, the concepts of the Entity-Relationship (ER) model and ER
+diagrams are presented and used to illustrate conceptual database design. Chapter 8
+focuses on data abstraction and semantic data modeling concepts and shows how
+the ER model can be extended to incorporate these ideas, leading to the enhanced-
+ER (EER) data model and EER diagrams. The concepts presented in Chapter 8
+include subclasses, specialization, generalization, and union types (categories). The
+notation for the class diagrams of UML is also introduced in Chapters 7 and 8.
+Chapter 9 discusses relational database design using ER- and EER-to-relational
+mapping.We end Part 3 with Chapter 10, which presents an overview of the different
+phases of the database design process in enterprises for medium-sized and large
+database applications.Part 3 covers several topics related to conceptual database modeling and database
+design. In Chapter 7, the concepts of the Entity-Relationship (ER) model and ER
+diagrams are presented and used to illustrate conceptual database design. Chapter 8
+focuses on data abstraction and semantic data modeling concepts and shows how
+the ER model can be extended to incorporate these ideas, leading to the enhanced-
+ER (EER) data model and EER diagrams. The concepts presented in Chapter 8
+include subclasses, specialization, generalization, and union types (categories). The
+notation for the class diagrams of UML is also introduced in Chapters 7 and 8.
+Chapter 9 discusses relational database design using ER- and EER-to-relational
+mapping.We end Part 3 with Chapter 10, which presents an overview of the different
+phases of the database design process in enterprises for medium-sized and large
+database applications.Part 3 covers several topics related to conceptual database modeling and database
+design. In Chapter 7, the concepts of the Entity-Relationship (ER) model and ER
+diagrams are presented and used to illustrate conceptual database design. Chapter 8
+focuses on data abstraction and semantic data modeling concepts and shows how
+the ER model can be extended to incorporate these ideas, leading to the enhanced-
+ER (EER) data model and EER diagrams. The concepts presented in Chapter 8
+include subclasses, specialization, generalization, and union types (categories). The
+notation for the class diagrams of UML is also introduced in Chapters 7 and 8.
+Chapter 9 discusses relational database design using ER- and EER-to-relational
+mapping.We end Part 3 with Chapter 10, which presents an overview of the different
+phases of the database design process in enterprises for medium-sized and large
+database applications.Part 3 covers several topics related to conceptual database modeling and database
+design. In Chapter 7, the concepts of the Entity-Relationship (ER) model and ER
+diagrams are presented and used to illustrate conceptual database design. Chapter 8
+focuses on data abstraction and semantic data modeling concepts and shows how
+the ER model can be extended to incorporate these ideas, leading to the enhanced-
+ER (EER) data model and EER diagrams. The concepts presented in Chapter 8
+include subclasses, specialization, generalization, and union types (categories). The
+notation for the class diagrams of UML is also introduced in Chapters 7 and 8.
+Chapter 9 discusses relational database design using ER- and EER-to-relational
+mapping.We end Part 3 with Chapter 10, which presents an overview of the different
+phases of the database design process in enterprises for medium-sized and large
+database applications.Part 3 covers several topics related to conceptual database modeling and database
+design. In Chapter 7, the concepts of the Entity-Relationship (ER) model and ER
+diagrams are presented and used to illustrate conceptual database design. Chapter 8
+focuses on data abstraction and semantic data modeling concepts and shows how
+the ER model can be extended to incorporate these ideas, leading to the enhanced-
+ER (EER) data model and EER diagrams. The concepts presented in Chapter 8
+include subclasses, specialization, generalization, and union types (categories). The
+notation for the class diagrams of UML is also introduced in Chapters 7 and 8.
+Chapter 9 discusses relational database design using ER- and EER-to-relational
+mapping.We end Part 3 with Chapter 10, which presents an overview of the different
+phases of the database design process in enterprises for medium-sized and large
+database applications.
+    </string>
+    <string name="error">Error!!!</string>
 </resources>
