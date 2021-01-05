@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SaveRestoreStateChallenge</string>
+    <string name="add_to_list">Add To List</string>
+    <string name="carrot">Carrot</string>
+    <string name="cake">Cake</string>
+    <string name="apples">Apples</string>
+    <string name="banana">Banana</string>
+    <string name="guava">Guava</string>
+    <string name="eggs">Eggs</string>
+    <string name="cabbage">Cabbage</string>
+    <string name="soda">Soda</string>
+    <string name="cookies">Cookies</string>
+    <string name="wine">Wine</string>
+</resources>
