@@ -1,8 +1,11 @@
 package com.m6code.saverestorestatechallenge;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TextView nine;
     TextView ten;
     FloatingActionButton mFloatingActionButton;
+    EditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         nine = findViewById(R.id.tv_nine);
         ten = findViewById(R.id.tv_ten);
         mFloatingActionButton = findViewById(R.id.floatingActionButton);
+        mEditText = findViewById(R.id.editText_location);
 
         Intent replyIntent = getIntent();
         Log.d(TAG, "onCreate: replyIntent is - " + replyIntent.getStringExtra(AddToListActivity.ADD_ITEM));
@@ -73,18 +78,38 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 String reply = data.getStringExtra(AddToListActivity.ADD_ITEM);
                 if (reply != null) {
-                    if (one.getText().toString().isEmpty()) one.setText(reply);
-                    else if (two.getText().toString().isEmpty()) two.setText(reply);
-                    else if (three.getText().toString().isEmpty()) three.setText(reply);
-                    else if (four.getText().toString().isEmpty()) four.setText(reply);
-                    else if (five.getText().toString().isEmpty()) five.setText(reply);
-                    else if (six.getText().toString().isEmpty()) six.setText(reply);
-                    else if (seven.getText().toString().isEmpty()) seven.setText(reply);
-                    else if (eight.getText().toString().isEmpty()) eight.setText(reply);
-                    else if (nine.getText().toString().isEmpty()) nine.setText(reply);
-                    else if (ten.getText().toString().isEmpty()) ten.setText(reply);
-                    else Toast.makeText(MainActivity.this, "List is Already Filled Up",
-                                Toast.LENGTH_LONG).show();
+                    if (one.getText().toString().isEmpty()) {
+                        one.setText(reply);
+                        one.setVisibility(View.VISIBLE);
+                    } else if (two.getText().toString().isEmpty()) {
+                        two.setText(reply);
+                        two.setVisibility(View.VISIBLE);
+                    } else if (three.getText().toString().isEmpty()) {
+                        three.setText(reply);
+                        three.setVisibility(View.VISIBLE);
+                    } else if (four.getText().toString().isEmpty()) {
+                        four.setText(reply);
+                        four.setVisibility(View.VISIBLE);
+                    } else if (five.getText().toString().isEmpty()) {
+                        five.setText(reply);
+                        five.setVisibility(View.VISIBLE);
+                    } else if (six.getText().toString().isEmpty()) {
+                        six.setText(reply);
+                        six.setVisibility(View.VISIBLE);
+                    } else if (seven.getText().toString().isEmpty()) {
+                        seven.setText(reply);
+                        seven.setVisibility(View.VISIBLE);
+                    } else if (eight.getText().toString().isEmpty()) {
+                        eight.setText(reply);
+                        eight.setVisibility(View.VISIBLE);
+                    } else if (nine.getText().toString().isEmpty()) {
+                        nine.setText(reply);
+                        nine.setVisibility(View.VISIBLE);
+                    } else if (ten.getText().toString().isEmpty()) {
+                        ten.setText(reply);
+                        ten.setVisibility(View.VISIBLE);
+                    } else Toast.makeText(MainActivity.this, "List is Already Filled Up",
+                            Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -114,5 +139,17 @@ public class MainActivity extends AppCompatActivity {
             outState.putString("nine", nine.getText().toString());
         if (!ten.getText().toString().isEmpty())
             outState.putString("ten", ten.getText().toString());
+    }
+
+    public void findLocation(View view) {
+        // Launch Map with Location
+        String location = mEditText.getText().toString();
+        Uri uri = Uri.parse("geo:0,0?q=" + location);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d(TAG, "findLocation: Cant't handle intent");
+        }
     }
 }

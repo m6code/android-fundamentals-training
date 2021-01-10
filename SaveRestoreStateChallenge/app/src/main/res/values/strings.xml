@@ -11,4 +11,6 @@
     <string name="soda">Soda</string>
     <string name="cookies">Cookies</string>
     <string name="wine">Wine</string>
+    <string name="location_string">Chicken Replubic, Abuja Nigeria</string>
+    <string name="find_location">Find Location</string>
 </resources>
