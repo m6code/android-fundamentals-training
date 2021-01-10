@@ -3,6 +3,7 @@ package com.m6code.implicitintents;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -55,5 +56,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.d(TAG, "openLocation: Can't handle this!");
         }
+    }
+
+    public void openCamera(View view) {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else Log.d(TAG, "openCamera: Can't handle this!");
     }
 }

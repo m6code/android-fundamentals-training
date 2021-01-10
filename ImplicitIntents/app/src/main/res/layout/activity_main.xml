@@ -49,4 +49,11 @@
         android:onClick="openText"
         android:text="@string/button_share" />
 
+    <Button
+        android:id="@+id/button_camera"
+        android:layout_width="match_parent"
+        android:text="@string/take_a_picture"
+        android:onClick="openCamera"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
