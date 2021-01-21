@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IntentPractise</string>
+    <string name="hint_enter_text">Enter numbers only and send</string>
+    <string name="hint_enter_message">Enter your message</string>
+    <string name="send">Send Message</string>
+    <string name="fine">Fine</string>
+    <string name="okay">Okay</string>
+    <string name="go">Let\'s Go</string>
+    <string name="yes">Yes, I know</string>
+    <string name="man">Man that\'s great</string>
+    <string name="come">Come Here</string>
+    <string name="shout">Shouting</string>
+</resources>
