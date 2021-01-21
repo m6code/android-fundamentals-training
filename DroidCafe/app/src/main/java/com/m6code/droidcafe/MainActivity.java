@@ -12,6 +12,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static String mOrderMessage = "Empty Selection";
+    public static final String EXTRA_MSG = "com.m6code.droidcafe.extra.MESSAGE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+            intent.putExtra(EXTRA_MSG, mOrderMessage);
             startActivity(intent);
         });
     }

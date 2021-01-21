@@ -39,15 +39,18 @@ public class FirstFragment extends Fragment {
 
 
     public void showDonutOrder(View view) {
-        displayToast(getString(R.string.donut_order_message));
+        MainActivity.mOrderMessage = getString(R.string.donut_order_message);
+        displayToast(MainActivity.mOrderMessage);
     }
 
     public void showIcreamOrder(View view){
-        displayToast(getString(R.string.ice_cream_order_message));
+        MainActivity.mOrderMessage = getString(R.string.ice_cream_order_message);
+        displayToast(MainActivity.mOrderMessage);
     }
 
     public void showFroyoOrder(View view){
-        displayToast(getString(R.string.froyo_order_message));
+        MainActivity.mOrderMessage = getString(R.string.froyo_order_message);
+        displayToast(MainActivity.mOrderMessage);
     }
 
 
