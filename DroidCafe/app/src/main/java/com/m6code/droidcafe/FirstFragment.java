@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -30,5 +31,28 @@ public class FirstFragment extends Fragment {
 //                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
 //            }
 //        });
+
+        view.findViewById(R.id.donut).setOnClickListener(this::showDonutOrder);
+        view.findViewById(R.id.icream).setOnClickListener(this::showIcreamOrder);
+        view.findViewById(R.id.froyo).setOnClickListener(this::showFroyoOrder);
+    }
+
+
+    public void showDonutOrder(View view) {
+        displayToast(getString(R.string.donut_order_message));
+    }
+
+    public void showIcreamOrder(View view){
+        displayToast(getString(R.string.ice_cream_order_message));
+    }
+
+    public void showFroyoOrder(View view){
+        displayToast(getString(R.string.froyo_order_message));
+    }
+
+
+    public void displayToast(String message){
+        Toast.makeText(getContext(), message,
+                Toast.LENGTH_SHORT).show();
     }
 }

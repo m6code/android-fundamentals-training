@@ -13,4 +13,7 @@
     <string name="donut_description">Donuts are glazed and sprinkled with candy</string>
     <string name="icream_description">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
     <string name="froyo_description">FroYo is premium self-serve frozen yogurt.</string>
+    <string name="donut_order_message">You ordered a donut.</string>
+    <string name="ice_cream_order_message">You ordered an ice cream sandwich.</string>
+    <string name="froyo_order_message">You ordered a FroYo.</string>
 </resources>
