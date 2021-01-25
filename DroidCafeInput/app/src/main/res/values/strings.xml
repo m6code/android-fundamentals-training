@@ -28,6 +28,15 @@
     <string name="next_day_ground_delivery">Next day ground delivery</string>
     <string name="same_day_messenger_service">Same day messenger service</string>
     <string name="pick_up">Pick Up</string>
+    <string name="action_contact">Contact</string>
+    <string name="action_order">Order</string>
+    <string name="action_status">Status</string>
+    <string name="action_favorites">Favorites</string>
+
+    <string name="action_order_message">You selected Order.</string>
+    <string name="action_status_message">You selected Status.</string>
+    <string name="action_favorites_message">You selected Favorites.</string>
+    <string name="action_contact_message">You selected Contact.</string>
 
 
     <string-array name="labels_array">
