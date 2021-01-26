@@ -39,6 +39,7 @@
     <string name="action_contact_message">You selected Contact.</string>
     <string name="date">Date</string>
     <string name="datepicker">datePicker</string>
+    <string name="title_order_activity">Order Activity</string>
 
 
     <string-array name="labels_array">
