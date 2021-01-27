@@ -39,13 +39,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+        fab.setOnClickListener(view -> {
+            int wordListSize = mWordList.size();
+            // Add a new word to the wordList.
+            mWordList.addLast("+ Word " + (wordListSize + 1));
+            // Notify the adapter, that the data has changed.
+            mRecyclerView.getAdapter().notifyItemInserted(wordListSize);
+            mRecyclerView.smoothScrollToPosition(wordListSize);
         });
+
     }
 
     @Override
