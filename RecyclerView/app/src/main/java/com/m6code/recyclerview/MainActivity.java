@@ -34,9 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        for (int i = 0; i < 20; i++) {
-            mWordList.addLast("Word " + (i+1));
-        }
+        loadList();
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
@@ -48,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
             mRecyclerView.smoothScrollToPosition(wordListSize);
         });
 
+    }
+
+    private void loadList() {
+        for (int i = 0; i < 20; i++) {
+            mWordList.addLast("Word " + (i+1));
+        }
     }
 
     @Override
@@ -65,7 +69,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_reset) {
+            mWordList.clear();
+            loadList();
+            mRecyclerView.getAdapter().notifyDataSetChanged();
             return true;
         }
 
