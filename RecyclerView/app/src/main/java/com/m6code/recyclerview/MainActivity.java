@@ -1,19 +1,16 @@
 package com.m6code.recyclerview;
 
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.View;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.LinkedList;
 
@@ -29,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mRecyclerView =findViewById(R.id.recyclerView);
-        mAdapter= new WordListAdapter(this, mWordList);
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mAdapter = new WordListAdapter(this, mWordList);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -46,11 +43,28 @@ public class MainActivity extends AppCompatActivity {
             mRecyclerView.smoothScrollToPosition(wordListSize);
         });
 
+        mRecyclerView.addOnItemTouchListener(
+                new RecyclerViewItemClickListener(getApplicationContext(), mRecyclerView, new RecyclerViewItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        String element = mWordList.get(position);
+                        // Change the word in the mWordList.
+                        mWordList.set(position, "Clicked! " + element);
+                        mAdapter.notifyDataSetChanged();
+                    }
+
+                    @Override
+                    public void onLongItemClick(View view, int position) {
+                        // Show context menu
+                    }
+                })
+        );
+
     }
 
     private void loadList() {
         for (int i = 0; i < 20; i++) {
-            mWordList.addLast("Word " + (i+1));
+            mWordList.addLast("Word " + (i + 1));
         }
     }
 
