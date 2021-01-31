@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ScoreButtons" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
+
+    <style name="PlusButtons" parent="ScoreButtons">
+        <item name="android:src">@drawable/ic_plus</item>
+        <item name="android:contentDescription">@string/plus_button</item>
+    </style>
+
+    <style name="MinusButtons" parent="ScoreButtons">
+        <item name="android:src">@drawable/ic_minus</item>
+        <item name="android:contentDescription">@string/minus_button</item>
+    </style>
+
+    <style name="ScoreText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display3</item>
+    </style>
+
+    <style name="TeamText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1</item>
+    </style>
+</resources>
