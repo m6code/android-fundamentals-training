@@ -5,4 +5,7 @@
     <string name="team_1">Team 1</string>
     <string name="team_2">Team 2</string>
     <string name="initial_count">0</string>
+
+    <string name="night_mode">Night Mode</string>
+    <string name="day_mode">Day Mode</string>
 </resources>
