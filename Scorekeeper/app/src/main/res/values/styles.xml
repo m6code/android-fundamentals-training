@@ -2,7 +2,7 @@
 <resources>
 
     <style name="ScoreButtons" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/button_background</item>
+        <item name="android:background">@drawable/button_state</item>
         <item name="android:textColor">@color/purple_500</item>
     </style>
 
