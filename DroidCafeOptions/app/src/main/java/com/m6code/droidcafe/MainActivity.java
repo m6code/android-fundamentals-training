@@ -4,21 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.Locale;
-
 public class MainActivity extends AppCompatActivity {
 
-    public static String mOrderMessage = "Empty Selection";
     public static final String EXTRA_MSG = "com.m6code.droidcafe.extra.MESSAGE";
+    public static String mOrderMessage = "Empty Selection";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        switch (id){
-            case R.id.action_order :
-                Intent intent =new Intent(MainActivity.this, OrderActivity.class);
+        switch (id) {
+            case R.id.action_order:
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
                 intent.putExtra(EXTRA_MSG, mOrderMessage);
                 startActivity(intent);
 //                displayToast(getString(R.string.action_order_message));
@@ -66,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_contact:
                 displayToast(getString(R.string.action_contact_message));
                 return true;
+            case R.id.theme_modes:
+                swapTheme();
             default:
                 // Do nothing
         }
@@ -73,7 +72,17 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void displayToast(String message){
+    private void swapTheme() {
+        int themeMode = AppCompatDelegate.getDefaultNightMode();
+        if (themeMode == AppCompatDelegate.MODE_NIGHT_YES) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        recreate();
+    }
+
+    public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
     }

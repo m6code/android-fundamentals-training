@@ -28,4 +28,10 @@
         android:orderInCategory="30"
         android:title="@string/action_favorites"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/theme_modes"
+        android:orderInCategory="40"
+        android:title="@string/night_mode"
+        app:showAsAction="never" />
 </menu>

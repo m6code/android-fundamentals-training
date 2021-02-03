@@ -40,6 +40,7 @@
     <string name="date">Date</string>
     <string name="datepicker">datePicker</string>
     <string name="title_order_activity">Order Activity</string>
+    <string name="night_mode">Night Mode</string>
 
 
     <string-array name="labels_array">
