@@ -1,0 +1,157 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\470317d36fb39a6108035c07790ac469\material-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\015d23415b90c2d81d9c4fab38c00c0e\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\32bf389d8de85727cbf065d5ae2a059f\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\521b0777ab17aa04bc208b77dc090642\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a918fdf040e1776f7a72391e1b2ba876\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a8f645244c4ea68144e560bf7b44f41f\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\5cc7e1ae2ab40d4202b4859e9ee713c2\appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\11ccaa796303a07963cbb195a299b82a\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\89cda1a3fd3d127ec04dc339bbdbbd87\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\4cb5ca44ed22743576beb25c88ff1d8c\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\c9396bb0eac58367372a65d098a9b236\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\63a1ff4bd81f5b502749f2a69b90faca\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\4bb5fae0eb5a9d53bfdc7b2a56bce9ab\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\07b1d3c7e0a3a6f2b01d1cfa843518ac\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\786fd518b6a66f2d1b4ae8bd223a5f5a\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\c7f78ec61a5ef23289e3d53684a7df3a\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\0c90cd62801cbddb626703dd9ca1c6fb\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\05c09e9564930a5922947956ed883ea3\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.3.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\40b8e17f153f848855dd6b04c733b1e3\core-1.3.1\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\2294a220dad06e8bfe05c0a419539940\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\513c1a35239aa3f24c9aea550d660674\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\9600a14ddc64dd349d9310be7eae0f7f\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\376fed9e2d8a8aa1102ab450a566c38f\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\db69ad6b87881226094599d228cdd3f7\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\7076b89b10439ee44f6468dff8260339\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\fd55789bb2c923a3cc8c050030bcc78a\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\8629806383735552b7396fb2c72352ec\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a6511e2c00583a06747c77b4c5eb95e1\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+	package
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:18:5-45
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:11-69
+application
+ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:20:5-33:19
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\470317d36fb39a6108035c07790ac469\material-1.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\470317d36fb39a6108035c07790ac469\material-1.2.1\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\015d23415b90c2d81d9c4fab38c00c0e\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\015d23415b90c2d81d9c4fab38c00c0e\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.3.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\40b8e17f153f848855dd6b04c733b1e3\core-1.3.1\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\40b8e17f153f848855dd6b04c733b1e3\core-1.3.1\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\2294a220dad06e8bfe05c0a419539940\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\2294a220dad06e8bfe05c0a419539940\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\40b8e17f153f848855dd6b04c733b1e3\core-1.3.1\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:24:9-35
+	android:label
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:23:9-41
+	android:icon
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:22:9-43
+	android:allowBackup
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:21:9-35
+	android:theme
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:25:9-40
+activity#com.example.android.materialme.MainActivity
+ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:26:9-32:20
+	android:name
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:26:19-77
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:27:13-31:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml:30:27-74
+uses-sdk
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\470317d36fb39a6108035c07790ac469\material-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\470317d36fb39a6108035c07790ac469\material-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\015d23415b90c2d81d9c4fab38c00c0e\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\015d23415b90c2d81d9c4fab38c00c0e\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\32bf389d8de85727cbf065d5ae2a059f\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\32bf389d8de85727cbf065d5ae2a059f\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\521b0777ab17aa04bc208b77dc090642\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\521b0777ab17aa04bc208b77dc090642\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a918fdf040e1776f7a72391e1b2ba876\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a918fdf040e1776f7a72391e1b2ba876\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a8f645244c4ea68144e560bf7b44f41f\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a8f645244c4ea68144e560bf7b44f41f\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\5cc7e1ae2ab40d4202b4859e9ee713c2\appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\5cc7e1ae2ab40d4202b4859e9ee713c2\appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\11ccaa796303a07963cbb195a299b82a\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\11ccaa796303a07963cbb195a299b82a\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\89cda1a3fd3d127ec04dc339bbdbbd87\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\89cda1a3fd3d127ec04dc339bbdbbd87\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\4cb5ca44ed22743576beb25c88ff1d8c\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\4cb5ca44ed22743576beb25c88ff1d8c\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\c9396bb0eac58367372a65d098a9b236\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\c9396bb0eac58367372a65d098a9b236\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\63a1ff4bd81f5b502749f2a69b90faca\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\63a1ff4bd81f5b502749f2a69b90faca\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\4bb5fae0eb5a9d53bfdc7b2a56bce9ab\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\4bb5fae0eb5a9d53bfdc7b2a56bce9ab\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\07b1d3c7e0a3a6f2b01d1cfa843518ac\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\07b1d3c7e0a3a6f2b01d1cfa843518ac\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\786fd518b6a66f2d1b4ae8bd223a5f5a\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\786fd518b6a66f2d1b4ae8bd223a5f5a\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\c7f78ec61a5ef23289e3d53684a7df3a\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\c7f78ec61a5ef23289e3d53684a7df3a\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\0c90cd62801cbddb626703dd9ca1c6fb\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\0c90cd62801cbddb626703dd9ca1c6fb\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\05c09e9564930a5922947956ed883ea3\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\05c09e9564930a5922947956ed883ea3\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.3.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\40b8e17f153f848855dd6b04c733b1e3\core-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.1] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\40b8e17f153f848855dd6b04c733b1e3\core-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\2294a220dad06e8bfe05c0a419539940\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\2294a220dad06e8bfe05c0a419539940\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\513c1a35239aa3f24c9aea550d660674\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\513c1a35239aa3f24c9aea550d660674\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\9600a14ddc64dd349d9310be7eae0f7f\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\9600a14ddc64dd349d9310be7eae0f7f\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\376fed9e2d8a8aa1102ab450a566c38f\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\376fed9e2d8a8aa1102ab450a566c38f\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\db69ad6b87881226094599d228cdd3f7\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\db69ad6b87881226094599d228cdd3f7\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\7076b89b10439ee44f6468dff8260339\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\7076b89b10439ee44f6468dff8260339\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\fd55789bb2c923a3cc8c050030bcc78a\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\fd55789bb2c923a3cc8c050030bcc78a\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\8629806383735552b7396fb2c72352ec\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\8629806383735552b7396fb2c72352ec\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a6511e2c00583a06747c77b4c5eb95e1\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Benjamin-PC\.gradle\caches\transforms-2\files-2.1\a6511e2c00583a06747c77b4c5eb95e1\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Benjamin-PC\mobile_dev\android\codelabs\android_fundamentals\MaterialMe-Starter\app\src\main\AndroidManifest.xml
