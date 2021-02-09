@@ -1,15 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_running.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_running.jpg"
     },
     {
-        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_baseball.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_baseball.jpg"
     },
     {
-        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_badminton.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_badminton.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_tabletennis.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_tabletennis.jpg"
     },
     {
         "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
@@ -18,6 +22,46 @@
     {
         "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_swimming.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_swimming.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_bowling.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_bowling.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_basketball.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_basketball.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_soccer.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_soccer.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_golf.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_golf.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_tennis.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_tennis.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_cycling.jpg.flat",
+        "source": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\src\\main\\res\\drawable\\img_cycling.jpg"
     },
     {
         "merged": "C:\\Users\\Benjamin-PC\\mobile_dev\\android\\codelabs\\android_fundamentals\\MaterialMe-Starter\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
