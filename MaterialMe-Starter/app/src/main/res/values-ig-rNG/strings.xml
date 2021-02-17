@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">Material Me!</string>
+        <string name="title_placeholder">Aha</string>
+        <string name="news_placeholder">Akụkọ</string>
+        <string name="sports_info_placeholder">Nke a bụ ụfọdụ ozi</string>
+        <string name="details_placeholder">Maka subTitleDetail TextView, wepu eriri ederede ebe obibi ma mado paragraf nke ederede ederede iji dochie ederede ederede (Dịka ọmụmaatụ, paragraf ole na ole nke Lorem Ipsum). Wepụ ederede na eriri eriri Maka subTitleDetail TextView, wepu eriri ederede placeholder ma mado paragraf nke ederede ederede iji dochie ederede ederede (Dịka ọmụmaatụ, paragraf ole na ole nke Lorem Ipsum). Wepụ ederede na eriri eriri Maka subTitleDetail TextView, wepu eriri ederede placeholder ma mado paragraf nke ederede ederede iji dochie ederede ederede (Dịka ọmụmaatụ, paragraf ole na ole nke Lorem Ipsum). Wepụ ederede na eriri eriri Maka subTitleDetail TextView, wepu eriri ederede placeholder ma mado paragraf nke ederede ederede iji dochie ederede ederede (Dịka ọmụmaatụ, paragraf ole na ole nke Lorem Ipsum). Wepụ ederede na eriri eriri Maka subTitleDetail TextView, wepu eriri ederede placeholder ma mado paragraf nke ederede ederede iji dochie ederede ederede (Dịka ọmụmaatụ, paragraf ole na ole nke Lorem Ipsum). Wepụ ederede na eriri eriri Maka subTitleDetail TextView, wepu eriri ederede placeholder ma mado paragraf nke ederede ederede iji dochie ederede ederede (Dịka ọmụmaatụ, paragraf ole na ole nke Lorem Ipsum). Wepu ederede na eriri eriri</string>
+
+        <string-array name="sports_titles">
+            <item>Baseball</item>
+            <item>Badminton</item>
+            <item>Bọọlụ Nkata</item>
+            <item>Bowling</item>
+            <item>Cgba ígwè</item>
+            <item>Golf</item>
+            <item>Na-agba ọsọ</item>
+            <item>Bọọlụ</item>
+            <item>Igwu</item>
+            <item>Isiokwu Tenis</item>
+            <item>Tenis</item>
+        </string-array>
+
+        <string-array name="sports_info">
+            <item>Lee ụfọdụ  Baseball Akụkọ!</item>
+            <item>Lee ụfọdụ  Badminton akụkọ!</item>
+            <item>Lee ụfọdụ  Bọọlụ Nkata akụkọ!</item>
+            <item>Lee ụfọdụ  Bowling akụkọ!</item>
+            <item>Lee ụfọdụ  Cgba ígwè akụkọ!</item>
+            <item>Lee ụfọdụ  Golf akụkọ!</item>
+            <item>Lee ụfọdụ  Na-agba ọsọ akụkọ!</item>
+            <item>Lee ụfọdụ  Bọọlụ akụkọ!</item>
+            <item>Lee ụfọdụ  Igwu akụkọ!</item>
+            <item>Lee ụfọdụ  Isiokwu Tenis akụkọ!</item>
+            <item>Lee ụfọdụ  Tenis akụkọ!</item>
+        </string-array>
+
+        <array name="sports_images">
+            <item>@drawable/img_baseball</item>
+            <item>@drawable/img_badminton</item>
+            <item>@drawable/img_basketball</item>
+            <item>@drawable/img_bowling</item>
+            <item>@drawable/img_cycling</item>
+            <item>@drawable/img_golf</item>
+            <item>@drawable/img_running</item>
+            <item>@drawable/img_soccer</item>
+            <item>@drawable/img_swimming</item>
+            <item>@drawable/img_tabletennis</item>
+            <item>@drawable/img_tennis</item>
+        </array>
+</resources>
