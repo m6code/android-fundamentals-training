@@ -2,6 +2,8 @@ package com.m6code.materialmeroom;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,13 +14,15 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     // Member variables.
     private RecyclerView mRecyclerView;
-    private ArrayList<Sport> mSportsData;
+    //private LiveData<List<Sport>> mSportsData;
     private SportsAdapter mAdapter;
+    private SportViewModel sportViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,24 +33,29 @@ public class MainActivity extends AppCompatActivity {
         int gridColumnCount = getResources()
                 .getInteger(R.integer.grid_column_count);
 
+        sportViewModel = new ViewModelProvider(this).get(SportViewModel.class);
+
         // Initialize the RecyclerView.
         mRecyclerView = findViewById(R.id.recyclerView);
+
+        // Initialize the adapter and set it to the RecyclerView.
+        mAdapter = new SportsAdapter(this);
+        mRecyclerView.setAdapter(mAdapter);
 
         // Set the Layout Manager.
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, gridColumnCount));
 
         // Initialize the ArrayList that will contain the data.
-        mSportsData = new ArrayList<>();
+        //mSportsData = new ArrayList<>();
 
-        // Initialize the adapter and set it to the RecyclerView.
-        mAdapter = new SportsAdapter(this, mSportsData);
-        mRecyclerView.setAdapter(mAdapter);
-
+        sportViewModel.getmAllSports().observe(this, sports -> {
+            mAdapter.setSportsList(sports);
+        });
         // Get the data.
         initializeData();
 
         int swipDirs;
-        if(gridColumnCount > 1){
+        if (gridColumnCount > 1) {
             swipDirs = 0;
         } else {
             swipDirs = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
@@ -61,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
                                   @NonNull RecyclerView.ViewHolder target) {
                 int from = viewHolder.getAdapterPosition();
                 int to = target.getAdapterPosition();
-                Collections.swap(mSportsData, from, to);
+                // TODO: swap on slide
+//                Collections.swap(mSportsData, from, to);
                 mAdapter.notifyItemMoved(from, to);
                 return false;
             }
@@ -69,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 // Delete item from list
-                mSportsData.remove(viewHolder.getAdapterPosition());
+                // TODO: delete on swipe
+//                mSportsData.remove(viewHolder.getAdapterPosition());
                 // Animate the deletion property
                 mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
             }
@@ -82,28 +93,32 @@ public class MainActivity extends AppCompatActivity {
      * Initialize the sports data from resources.
      */
     private void initializeData() {
-        // Get the resources from the XML file.
-        String[] sportsList = getResources()
-                .getStringArray(R.array.sports_titles);
-        String[] sportsInfo = getResources()
-                .getStringArray(R.array.sports_info);
-        TypedArray sportsImageResources =
-                getResources().obtainTypedArray(R.array.sports_images);
+//        // Get the resources from the XML file.
+//        String[] sportsList = getResources()
+//                .getStringArray(R.array.sports_titles);
+//        String[] sportsInfo = getResources()
+//                .getStringArray(R.array.sports_info);
+//        TypedArray sportsImageResources =
+//                getResources().obtainTypedArray(R.array.sports_images);
+//
+//        // Clear the existing data (to avoid duplication).
+//        mSportsData.clear();
+//
+//        // Create the ArrayList of Sports objects with titles and
+//        // information about each sport.
+//        for (int i = 0; i < sportsList.length; i++) {
+//            mSportsData.add(new Sport(sportsList[i], sportsInfo[i],
+//                    sportsImageResources.getResourceId(i, 0)));
 
-        // Clear the existing data (to avoid duplication).
-        mSportsData.clear();
+//        if (mSportsData != null) mSportsData.clear();
 
-        // Create the ArrayList of Sports objects with titles and
-        // information about each sport.
-        for (int i = 0; i < sportsList.length; i++) {
-            mSportsData.add(new Sport(sportsList[i], sportsInfo[i],
-                    sportsImageResources.getResourceId(i, 0)));
-        }
 
-        sportsImageResources.recycle();
+//    }
+
+//        sportsImageResources.recycle();
 
         // Notify the adapter of the change.
-        mAdapter.notifyDataSetChanged();
+          mAdapter.notifyDataSetChanged();
     }
 
     public void resetSports(View view) {

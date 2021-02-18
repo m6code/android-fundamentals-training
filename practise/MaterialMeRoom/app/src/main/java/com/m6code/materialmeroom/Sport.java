@@ -16,15 +16,34 @@
 
 package com.m6code.materialmeroom;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 /**
  * Data model for each row of the RecyclerView
  */
-class Sport {
+@Entity(tableName = "sports_table")
+public class Sport {
 
     // Member variables representing the title and information about the sport.
+    @NonNull
+    @ColumnInfo(name = "id")
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+
+    @ColumnInfo
+    @NonNull
     private String title;
+
+    @ColumnInfo
+    @NonNull
     private String info;
-    private final int imageResource;
+
+    @ColumnInfo
+    @NonNull
+    private final String imageResource;
 
     /**
      * Constructor for the Sport data model.
@@ -32,35 +51,39 @@ class Sport {
      * @param title The name if the sport.
      * @param info Information about the sport.
      */
-    Sport(String title, String info,int imageResource) {
+    public Sport(String title, String info,String imageResource) {
         this.title = title;
         this.info = info;
         this.imageResource = imageResource;
     }
 
-    /**
-     * Gets the title of the sport.
-     *
-     * @return The title of the sport.
-     */
-    String getTitle() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @NonNull
+    public String getTitle() {
         return title;
     }
 
-    /**
-     * Gets the info about the sport.
-     *
-     * @return The info about the sport.
-     */
-    String getInfo() {
+    public void setTitle(@NonNull String title) {
+        this.title = title;
+    }
+
+    @NonNull
+    public String getInfo() {
         return info;
     }
 
-    /**
-     * Get the corresponding image for the sport
-     * @return the image of the sport
-     */
-    int getImageResource(){
+    public void setInfo(@NonNull String info) {
+        this.info = info;
+    }
+
+    public String getImageResource() {
         return imageResource;
     }
 }

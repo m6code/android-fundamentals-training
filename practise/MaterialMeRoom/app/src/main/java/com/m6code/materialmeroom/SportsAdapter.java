@@ -29,6 +29,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /***
  * The adapter class for the RecyclerView, contains the sports data.
@@ -36,18 +37,17 @@ import java.util.ArrayList;
 class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
 
     // Member variables.
-    private ArrayList<Sport> mSportsData;
+    private List<Sport> mSportsData;
     private Context mContext;
+    private final LayoutInflater mInflater;
 
     /**
      * Constructor that passes in the sports data and the context.
      *
-     * @param sportsData ArrayList containing the sports data.
      * @param context Context of the application.
      */
-    SportsAdapter(Context context, ArrayList<Sport> sportsData) {
-        this.mSportsData = sportsData;
-        this.mContext = context;
+    SportsAdapter(Context context) {
+        mInflater = LayoutInflater.from(context);
     }
 
 
@@ -62,8 +62,8 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
     @Override
     public SportsAdapter.ViewHolder onCreateViewHolder(
             ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(mContext).
-                inflate(R.layout.list_item, parent, false));
+        return new ViewHolder(mInflater.inflate(R.layout.list_item, parent,
+                false));
     }
 
     /**
@@ -89,9 +89,14 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
      */
     @Override
     public int getItemCount() {
-        return mSportsData.size();
+        return mSportsData!=null? mSportsData.size() : 0;
     }
 
+
+    void setSportsList(List<Sport> sports){
+        mSportsData = sports;
+        notifyDataSetChanged();
+    }
 
     /**
      * ViewHolder class that represents each row of data in the RecyclerView.
@@ -124,9 +129,12 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             // Populate the textviews with data.
             mTitleText.setText(currentSport.getTitle());
             mInfoText.setText(currentSport.getInfo());
-            Glide.with(mContext)
-                    .load(currentSport.getImageResource())
-                    .into(mSportsImage);
+
+            // TODO: fix glide loading error
+
+//            Glide.with(mContext)
+//                    .load(currentSport.getImageResource())
+//                    .into(mSportsImage);
         }
 
         @Override
