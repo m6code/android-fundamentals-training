@@ -134,7 +134,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             mTitleText.setText(currentSport.getTitle());
             mInfoText.setText(currentSport.getInfo());
 
-            // TODO: fix glide loading error
+
             String imgRsr = currentSport.getImageResource();
             int res = mContext.getResources().getIdentifier(imgRsr, "drawable", mContext.getPackageName());
             Log.d(TAG, "bindTo: Image resource id - " + res);

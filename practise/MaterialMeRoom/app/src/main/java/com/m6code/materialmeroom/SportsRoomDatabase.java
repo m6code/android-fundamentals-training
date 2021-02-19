@@ -28,6 +28,8 @@ public abstract class SportsRoomDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
+
+    // Populate the database with initial sports data
     public static RoomDatabase.Callback sRoomDatabaseCallBack =
             new RoomDatabase.Callback() {
                 @Override
@@ -40,10 +42,9 @@ public abstract class SportsRoomDatabase extends RoomDatabase {
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
         private final SportDao mDao;
 
-        String[] sportsTitle = {"Baseball", "Badminton", "Basketball", "Bowling", "Cycling"};
+        String[] sportsTitle = {"Baseball", "Badminton", "Basketball", "Bowling", "Cycling",
+                "Golf", "Running", "Soccer", "Swimming", "Table Tennis", "Tennis"};
         //String[] sportsInfo = {"Here is some Baseball news!", "Here is some Badminton news!", "", "", "", ""};
-
-        String[] sportsImg = {"baseball", "badminton", "basketball", "bowling", "cycling"};
 
         PopulateDbAsync(SportsRoomDatabase db){
             mDao = db.sportDao();
@@ -56,7 +57,7 @@ public abstract class SportsRoomDatabase extends RoomDatabase {
                 for (int i = 0; i <= sportsTitle.length -1; i++){
                     Sport sport = new Sport(sportsTitle[i],
                             "Here is some " + sportsTitle[i] + " news!",
-                            "img_"+sportsImg[i]);
+                            "img_"+sportsTitle[i].toLowerCase().replaceAll("\\s+", ""));
                     mDao.insert(sport);
                 }
             }
