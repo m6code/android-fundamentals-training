@@ -18,6 +18,7 @@ package com.m6code.materialmeroom;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,8 @@ import java.util.List;
  */
 class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
 
+    String TAG = SportsAdapter.class.getSimpleName();
+
     // Member variables.
     private List<Sport> mSportsData;
     private Context mContext;
@@ -47,6 +50,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
      * @param context Context of the application.
      */
     SportsAdapter(Context context) {
+        mContext = context;
         mInflater = LayoutInflater.from(context);
     }
 
@@ -131,10 +135,13 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             mInfoText.setText(currentSport.getInfo());
 
             // TODO: fix glide loading error
+            String imgRsr = currentSport.getImageResource();
+            int res = mContext.getResources().getIdentifier(imgRsr, "drawable", mContext.getPackageName());
+            Log.d(TAG, "bindTo: Image resource id - " + res);
 
-//            Glide.with(mContext)
-//                    .load(currentSport.getImageResource())
-//                    .into(mSportsImage);
+            Glide.with(mContext)
+                    .load(res)
+                    .into(mSportsImage);
         }
 
         @Override
@@ -142,7 +149,9 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             Sport currentSport = mSportsData.get(getAdapterPosition());
             Intent detailIntent = new Intent(mContext, DetailActivity.class);
             detailIntent.putExtra("title", currentSport.getTitle());
-            detailIntent.putExtra("image_resource", currentSport.getImageResource());
+            detailIntent.putExtra("image_resource",
+                    mContext.getResources().getIdentifier(currentSport.getImageResource(),
+                            "drawable", mContext.getPackageName()));
             mContext.startActivity(detailIntent);
         }
     }

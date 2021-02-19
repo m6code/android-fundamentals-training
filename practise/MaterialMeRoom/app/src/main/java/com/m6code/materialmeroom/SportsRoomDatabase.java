@@ -56,7 +56,7 @@ public abstract class SportsRoomDatabase extends RoomDatabase {
                 for (int i = 0; i <= sportsTitle.length -1; i++){
                     Sport sport = new Sport(sportsTitle[i],
                             "Here is some " + sportsTitle[i] + " news!",
-                            "@drawable/img_"+sportsImg[i]);
+                            "img_"+sportsImg[i]);
                     mDao.insert(sport);
                 }
             }
