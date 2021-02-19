@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Member variables.
     private RecyclerView mRecyclerView;
-    //private LiveData<List<Sport>> mSportsData;
+    //    private LiveData<List<Sport>> mSportsData;
     private SportsAdapter mAdapter;
     private SportViewModel sportViewModel;
 
@@ -79,7 +80,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 // Delete item from list
-                // TODO: delete on swipe
+                // Delete sport from database on swipe left or right
+                sportViewModel.delete(mAdapter.getWordAtPosition(viewHolder.getAdapterPosition()));
+                Toast.makeText(MainActivity.this, "Successfully Deleted", Toast.LENGTH_SHORT).show();
+
 //                mSportsData.remove(viewHolder.getAdapterPosition());
                 // Animate the deletion property
                 mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
@@ -118,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 //        sportsImageResources.recycle();
 
         // Notify the adapter of the change.
-          mAdapter.notifyDataSetChanged();
+        mAdapter.notifyDataSetChanged();
     }
 
     public void resetSports(View view) {

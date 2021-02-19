@@ -35,7 +35,7 @@ import java.util.List;
 /***
  * The adapter class for the RecyclerView, contains the sports data.
  */
-class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
+class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder> {
 
     String TAG = SportsAdapter.class.getSimpleName();
 
@@ -58,8 +58,8 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
     /**
      * Required method for creating the viewholder objects.
      *
-     * @param parent The ViewGroup into which the new View will be added
-     *               after it is bound to an adapter position.
+     * @param parent   The ViewGroup into which the new View will be added
+     *                 after it is bound to an adapter position.
      * @param viewType The view type of the new View.
      * @return The newly created ViewHolder.
      */
@@ -73,7 +73,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
     /**
      * Required method that binds the data to the viewholder.
      *
-     * @param holder The viewholder into which the data should be put.
+     * @param holder   The viewholder into which the data should be put.
      * @param position The adapter position.
      */
     @Override
@@ -93,19 +93,24 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
      */
     @Override
     public int getItemCount() {
-        return mSportsData!=null? mSportsData.size() : 0;
+        return mSportsData != null ? mSportsData.size() : 0;
     }
 
 
-    void setSportsList(List<Sport> sports){
+    void setSportsList(List<Sport> sports) {
         mSportsData = sports;
         notifyDataSetChanged();
+    }
+
+    // Get the Sport at a position
+    public Sport getWordAtPosition(int position) {
+        return mSportsData.get(position);
     }
 
     /**
      * ViewHolder class that represents each row of data in the RecyclerView.
      */
-    class ViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         // Member Variables for the TextViews
         private TextView mTitleText;
@@ -129,7 +134,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             itemView.setOnClickListener(this);
         }
 
-        void bindTo(Sport currentSport){
+        void bindTo(Sport currentSport) {
             // Populate the textviews with data.
             mTitleText.setText(currentSport.getTitle());
             mInfoText.setText(currentSport.getInfo());
