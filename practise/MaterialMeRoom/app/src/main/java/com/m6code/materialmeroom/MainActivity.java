@@ -2,12 +2,14 @@ package com.m6code.materialmeroom;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // initialize fragment
+        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction()
+//                    .setReorderingAllowed(true)
+//                    .add(R.id.addEditFragment, AddSportDialogFragment.class, null)
+//                    .commit();
+        }
 
         // Get the integer value from the integers.xml
         int gridColumnCount = getResources()
@@ -125,7 +135,17 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.notifyDataSetChanged();
     }
 
-    public void resetSports(View view) {
-        initializeData();
+    public void addSports(View view) {
+        // TODO: should launch a fragment that creates sport and insert into database
+        // Show image picker from default image
+        // show gallery image picker for user image
+
+        getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .add(R.id.addEditFragment, AddSportDialogFragment.class, null)
+                .commit();
+
+//        Intent intent = new Intent(this, AddSportDialogFragment.class);
+//        startActivity(intent);
     }
 }
