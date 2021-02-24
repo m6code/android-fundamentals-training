@@ -40,11 +40,11 @@
         android:src="@drawable/ic_add"
         android:tint="@android:color/white" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/addEditFragment"
-        android:name="com.m6code.materialmeroom.AddSportDialogFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-<!--        android:layout_alignParentBottom="true" />-->
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/addEditFragment"-->
+<!--        android:name="com.m6code.materialmeroom.AddSportDialogFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+<!--&lt;!&ndash;        android:layout_alignParentBottom="true" />&ndash;&gt;-->
 
 </RelativeLayout>
