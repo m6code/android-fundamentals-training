@@ -1,4 +1,4 @@
-package com.m6code.materialmeroom2;
+package com.m6code.materialmeroom2.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.m6code.materialmeroom2.R;
 
 public class DetailActivity extends AppCompatActivity {
 

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.m6code.materialmeroom2.FirstFragment"
+        android:name="com.m6code.materialmeroom2.ui.SportsFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_sport">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.m6code.materialmeroom2.SecondFragment"
+        android:name="com.m6code.materialmeroom2.ui.AddEditNoteDialogFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 

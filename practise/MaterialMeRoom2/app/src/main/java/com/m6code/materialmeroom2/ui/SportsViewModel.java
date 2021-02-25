@@ -12,6 +12,7 @@ import com.m6code.materialmeroom2.room.SportsRespository;
 import java.util.List;
 
 public class SportsViewModel extends AndroidViewModel {
+
     private SportsRespository mRespository;
     private LiveData<List<Sport>> allSports;
 
