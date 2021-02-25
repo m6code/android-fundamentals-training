@@ -1,17 +1,16 @@
 package com.m6code.materialmeroom2;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
-
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+//        int nightMode = AppCompatDelegate.getDefaultNightMode();
+//        if (nightMode == AppCompatDelegate.MODE_NIGHT_YES){
+//            menu.findItem(R.id.action_night_mode).setTitle(R.string.night_mode);
+//        }else menu.findItem(R.id.action_night_mode).setTitle(R.string.night_mode);
         return true;
     }
 
@@ -49,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        } else if (id == R.id.action_night_mode) {
+            // set night or day mode
+            int nightMode = AppCompatDelegate.getDefaultNightMode();
+            if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            }
+            // Recreate the activity for the theme change to take effect
+            recreate();
         }
 
         return super.onOptionsItemSelected(item);
