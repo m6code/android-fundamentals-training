@@ -20,7 +20,7 @@
         tools:layout="@layout/fragment_add_edit_sport"
         android:label="AddEditNoteDialogFragment" >
         <action
-            android:id="@+id/action_addEditSportDialogFragment_to_sportsFragment2"
+            android:id="@+id/action_addEditSportDialogFragment_to_sportsFragment"
             app:destination="@id/sportsFragment" />
     </dialog>
 </navigation>
