@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 
 import androidx.annotation.NonNull;
+import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
@@ -11,6 +12,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.m6code.materialmeroom2.model.Sport;
 import com.m6code.materialmeroom2.model.SportDao;
 
+@Database(entities = {Sport.class}, version = 1, exportSchema = false)
 public abstract class SportsRoomDatabase extends RoomDatabase {
 
     public abstract SportDao sportDao();
@@ -61,6 +63,7 @@ public abstract class SportsRoomDatabase extends RoomDatabase {
                     Sport sport = new Sport(sportsTitle[i],
                             "Here is some "+ sportsTitle[i] + " news!",
                             "img_"+ sportsTitle[i].replace("\\s+", "").toLowerCase());
+                    mDao.insert(sport);
                 }
             }
             return null;

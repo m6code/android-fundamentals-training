@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.m6code.materialmeroom2.R;
@@ -36,6 +37,7 @@ public class SportsFragment extends Fragment {
         int gridCount = getResources().getInteger(R.integer.grid_column_count);
         mAdapter = new SportsAdapter(getContext());
         mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), gridCount));
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter(mAdapter);
 
         return root;

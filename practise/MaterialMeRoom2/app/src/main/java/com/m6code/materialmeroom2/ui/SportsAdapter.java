@@ -89,6 +89,7 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewH
             mInfo.setText(currentSport.getInfo());
 
             String imgRsr = currentSport.getImageResource();
+            // Gets the image resource id
             int res = mContext.getResources().getIdentifier(imgRsr, "drawable", mContext.getPackageName());
 
             Glide.with(mContext)
