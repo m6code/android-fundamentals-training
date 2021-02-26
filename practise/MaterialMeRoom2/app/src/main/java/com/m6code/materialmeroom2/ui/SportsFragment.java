@@ -1,15 +1,18 @@
 package com.m6code.materialmeroom2.ui;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,6 +42,37 @@ public class SportsFragment extends Fragment {
         mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), gridCount));
 //        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter(mAdapter);
+
+        int swipDirs = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT | ItemTouchHelper.DOWN | ItemTouchHelper.UP,
+                swipDirs) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView,
+                                  @NonNull RecyclerView.ViewHolder viewHolder,
+                                  @NonNull RecyclerView.ViewHolder target) {
+                int from = viewHolder.getAdapterPosition();
+                int to = target.getAdapterPosition();
+                // TODO: swap on slide
+//                Collections.swap(mSportsData, from, to);
+                mAdapter.notifyItemMoved(from, to);
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                // Delete item from list
+                // Delete sport from database on swipe left or right
+                mSportsViewModel.delete(mAdapter.getSportAtPosition(viewHolder.getAdapterPosition()));
+                Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
+
+//                mSportsData.remove(viewHolder.getAdapterPosition());
+                // Animate the deletion property
+                mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+            }
+        });
+
+        helper.attachToRecyclerView(mRecyclerView);
 
         return root;
     }
