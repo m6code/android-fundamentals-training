@@ -7,11 +7,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.m6code.materialmeroom2.R;
 
-public class AddEditNoteDialogFragment extends Fragment {
+public class AddEditSportDialogFragment extends BottomSheetDialogFragment {
+
+    private static final String TAG = AddEditSportDialogFragment.class.getSimpleName();
 
     @Override
     public View onCreateView(
@@ -19,7 +21,7 @@ public class AddEditNoteDialogFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        return inflater.inflate(R.layout.fragment_add_edit_sport, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class AddEditNoteDialogFragment extends Fragment {
 //        view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                NavHostFragment.findNavController(AddEditNoteDialogFragment.this)
+//                NavHostFragment.findNavController(AddEditSportDialogFragment.this)
 //                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
 //            }
 //        });
