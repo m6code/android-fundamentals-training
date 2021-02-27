@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     //    private LiveData<List<Sport>> mSportsData;
     private SportsAdapter mAdapter;
     private SportViewModel sportViewModel;
-    private AlertDialog dialog;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 //                    .add(R.id.addEditFragment, AddSportDialogFragment.class, null)
 //                    .commit();
         }
+        AddSportDialogFragment diag = new AddSportDialogFragment();
+        dialog = diag.onCreateDialog(savedInstanceState);
 
         // Get the integer value from the integers.xml
         int gridColumnCount = getResources()
@@ -152,30 +155,6 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 
         // TODO: Show show a dialog
-        // 1. Instantiate an <code><a href="/reference/android/app/AlertDialog.Builder.html">AlertDialog.Builder</a></code> with its constructor
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-// 2. Chain together various setter methods to set the dialog characteristics
-        builder.setMessage("Add a Sport")
-                .setTitle("New Sport");
-
-        builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // TODO: Add Sport to Database
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //Cancel and hide dialog;
-                if (dialog != null) dialog.dismiss();
-            }
-        });
-
-// 3. Get the <code><a href="/reference/android/app/AlertDialog.html">AlertDialog</a></code> from <code><a href="/reference/android/app/AlertDialog.Builder.html#create()">create()</a></code>
-        dialog = builder.create();
 
         dialog.show();
     }

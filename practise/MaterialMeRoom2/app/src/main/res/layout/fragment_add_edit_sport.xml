@@ -55,6 +55,16 @@
         <!--                android:inputType="textMultiLine" />-->
         <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
+        <!--        Image Button for / Icon for Image-->
+
+        <Button
+            android:id="@+id/button_image_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:text="@string/select_sports_image" />
+
     </LinearLayout>
 
 
