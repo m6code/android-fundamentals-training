@@ -48,17 +48,17 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewH
         return mSportsData == null ? 0 : mSportsData.size();
     }
 
-    void setSportsData(List<Sport> sports){
+    void setSportsData(List<Sport> sports) {
         mSportsData = sports;
         notifyDataSetChanged();
     }
 
     // Get the Sport at a position
-    public Sport getSportAtPosition(int pos){
+    public Sport getSportAtPosition(int pos) {
         return mSportsData.get(pos);
     }
 
-    public class SportViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class SportViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         protected ImageView mImageView;
         protected TextView mTitle;
@@ -84,7 +84,7 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewH
             mContext.startActivity(detailIntent);
         }
 
-        void bindTo(Sport currentSport){
+        void bindTo(Sport currentSport) {
             mTitle.setText(currentSport.getTitle());
             mInfo.setText(currentSport.getInfo());
 
@@ -92,9 +92,16 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewH
             // Gets the image resource id
             int res = mContext.getResources().getIdentifier(imgRsr, "drawable", mContext.getPackageName());
 
-            Glide.with(mContext)
-                    .load(res)
-                    .into(mImageView);
+            // if resource is not found it means it using content URI then load with content uri
+            if (res == 0) {
+                Glide.with(mContext)
+                        .load(imgRsr)
+                        .into(mImageView);
+            } else {
+                Glide.with(mContext)
+                        .load(res)
+                        .into(mImageView);
+            }
         }
     }
 }
