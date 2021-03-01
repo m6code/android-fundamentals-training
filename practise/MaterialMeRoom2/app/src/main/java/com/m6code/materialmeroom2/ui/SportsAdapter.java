@@ -2,6 +2,7 @@ package com.m6code.materialmeroom2.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,9 +79,11 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewH
             Sport currentSport = mSportsData.get(getAdapterPosition());
             Intent detailIntent = new Intent(mContext, DetailActivity.class);
             detailIntent.putExtra("title", currentSport.getTitle());
-            detailIntent.putExtra("image_resource",
+            detailIntent.putExtra("image_resource_string", currentSport.getImageResource());
+            detailIntent.putExtra("image_resource_id",
                     mContext.getResources().getIdentifier(currentSport.getImageResource(),
                             "drawable", mContext.getPackageName()));
+            Log.d(TAG, "onClick: image resource" + currentSport.getImageResource());
             mContext.startActivity(detailIntent);
         }
 
@@ -96,6 +99,7 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewH
             if (res == 0) {
                 Glide.with(mContext)
                         .load(imgRsr)
+                        .centerCrop()
                         .into(mImageView);
             } else {
                 Glide.with(mContext)

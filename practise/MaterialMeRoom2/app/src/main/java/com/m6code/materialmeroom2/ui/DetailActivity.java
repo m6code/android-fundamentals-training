@@ -2,6 +2,7 @@ package com.m6code.materialmeroom2.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,11 +17,22 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        Intent intent = getIntent();
+
         TextView sportTitle = findViewById(R.id.titleDetail);
         ImageView sportsImage = findViewById(R.id.sportsImageDetail);
-        sportTitle.setText(getIntent().getStringExtra("title"));
-        Glide.with(this)
-                .load(getIntent().getIntExtra("image_resource", 0))
-                .into(sportsImage);
+        sportTitle.setText(intent.getStringExtra("title"));
+
+        int imgId = intent.getIntExtra("image_resource_id", 0);
+        if (imgId != 0) {
+            Glide.with(this)
+                    .load(intent.getIntExtra("image_resource_id", 0))
+                    .into(sportsImage);
+        }else {
+            Glide.with(this)
+                    .load(intent.getStringExtra("image_resource_string"))
+                    .centerCrop()
+                    .into(sportsImage);
+        }
     }
 }
