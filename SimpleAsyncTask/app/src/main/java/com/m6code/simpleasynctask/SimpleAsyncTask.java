@@ -17,7 +17,7 @@ public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... voids) {
         Random random = new Random();
-        int n = random.nextInt();
+        int n = random.nextInt(11);
         int s = n * 200;
 
         try {
@@ -32,7 +32,8 @@ public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String s) {
-        // Because mTextView is a weak reference, you have to deference it with the get() method to get the underlying TextView object, and to call setText() on it.
+        // Because mTextView is a weak reference, you have to deference it with the get()
+        // method to get the underlying TextView object, and to call setText() on it.
         mTextView.get().setText(s);
     }
 }
