@@ -24,12 +24,15 @@ public class MainActivity extends AppCompatActivity {
 
         filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
         filter.addAction(Intent.ACTION_POWER_CONNECTED);
+        filter.addAction(Intent.ACTION_HEADSET_PLUG);
 
         this.registerReceiver(mReceiver, filter);
 
         LocalBroadcastManager.getInstance(this)
                 .registerReceiver(mReceiver,
                         new IntentFilter(ACTION_CUSTOM_BROADCAST));
+
+
 
     }
 
