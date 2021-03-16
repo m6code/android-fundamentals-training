@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 .setContentText("This is your notification text")
                 .setContentIntent(notifcationPendingIntent)
                 .setAutoCancel(true)
+                .setDeleteIntent(notifcationPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
                 .setSmallIcon(R.drawable.ic_android);
