@@ -8,6 +8,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
     private NotificationManager mNotifyManager;
     private static final int NOTIFICATION_ID = 0;
+    private static final String ACTION_UPDATE_NOTIFICATION =
+            "com.example.android.notifyme.ACTION_UPDATE_NOTIFICATION";
+    private NotificationReceiver mReceiver = new NotificationReceiver();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,18 +54,27 @@ public class MainActivity extends AppCompatActivity {
         setNotificationButtonState(true, false, false);
 
         createNotificationChannel();
+
+        registerReceiver(mReceiver, new IntentFilter(ACTION_UPDATE_NOTIFICATION));
     }
 
     void setNotificationButtonState(Boolean isNotifyEnabled,
                                     Boolean isUpdateEnabled,
-                                    Boolean isCancelEnabled){
+                                    Boolean isCancelEnabled) {
         button_notify.setEnabled(isNotifyEnabled);
         button_update.setEnabled(isUpdateEnabled);
         button_cancel.setEnabled(isCancelEnabled);
     }
 
     public void sendNotification() {
+
+        Intent updateIntent = new Intent(ACTION_UPDATE_NOTIFICATION);
+        PendingIntent updatePendingIntent = PendingIntent.getBroadcast(
+                this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT);
+
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
+        notifyBuilder.addAction(R.drawable.ic_update, "Update Notification",
+                updatePendingIntent);
         mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
         setNotificationButtonState(false, true, true);
     }
@@ -119,5 +133,11 @@ public class MainActivity extends AppCompatActivity {
 
         return notifyBuilder;
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(mReceiver);
+        super.onDestroy();
     }
 }
