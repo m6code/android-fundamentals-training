@@ -84,9 +84,14 @@ public class MainActivity extends AppCompatActivity {
                 .decodeResource(getResources(), R.drawable.mascot_1);
 
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
-        notifyBuilder.setStyle(new NotificationCompat.BigPictureStyle()
-                .bigPicture(androidImage)
-                .setBigContentTitle("Notification Updated!"));
+        notifyBuilder.setStyle(new NotificationCompat.InboxStyle()
+                .setBigContentTitle("Update Notifications Title")
+                .addLine("Notification Updated One")
+                .addLine("Notification two")
+                .addLine("Yep that's em last one")
+                .setSummaryText("+3 more Notifications")
+        );
+
 
         mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
 
