@@ -4,4 +4,8 @@
     <string name="alarm_on">Alarm on</string>
     <string name="stand_up_on">Stand Up Alarm On!</string>
     <string name="stand_up_off">Stand Up Alarm Off!</string>
+    <string name="stand_up_notification">Stand Up Notification</string>
+    <string name="notifies_every_15_minutes_to_stand_up_and_walk">Notifies every 15 minutes to stand up and walk</string>
+    <string name="stand_up_alert">Stand Up Alert</string>
+    <string name="you_should_stand_up">You should stand up and walk around now!</string>
 </resources>
