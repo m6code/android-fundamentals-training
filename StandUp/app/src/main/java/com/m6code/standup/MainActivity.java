@@ -3,6 +3,7 @@ package com.m6code.standup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -11,6 +12,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -26,15 +28,33 @@ public class MainActivity extends AppCompatActivity {
         mNotificationManager = (NotificationManager)
                 getSystemService(NOTIFICATION_SERVICE);
 
+        Intent notifyIntent = new Intent(this, AlarmReceiver.class);
+        final PendingIntent notifyPendingIntent = PendingIntent.getBroadcast(
+                this, NOTIFICATION_ID, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        final AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+        boolean alarmUp = (PendingIntent.getBroadcast(
+                this, NOTIFICATION_ID,
+                notifyIntent, PendingIntent.FLAG_NO_CREATE) != null);
+
         ToggleButton alarmToggle = findViewById(R.id.alarmToggle);
+
+        alarmToggle.setChecked(alarmUp);
+
         alarmToggle.setOnCheckedChangeListener((buttonView, isChecked) -> {
             String toastMsg;
             if (isChecked) {
                 // Set the toast message for the "on" case.
-                deliverNotification(MainActivity.this);
+                long repeatInterval = AlarmManager.INTERVAL_FIFTEEN_MINUTES;
+                long triggerTime = SystemClock.elapsedRealtime() + repeatInterval;
+                alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                        triggerTime, repeatInterval, notifyPendingIntent);
+
                 toastMsg = getString(R.string.stand_up_on);
             } else {
                 // Set the toast message for the "off" case.
+                if (alarmManager != null) alarmManager.cancel(notifyPendingIntent);
                 mNotificationManager.cancelAll();
                 toastMsg = getString(R.string.stand_up_off);
             }
@@ -42,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
             // Show a toast to say the alarm is turned on or off.
             Toast.makeText(MainActivity.this, toastMsg, Toast.LENGTH_SHORT).show();
         });
-
         createNotificationChannel();
     }
 
@@ -69,23 +88,5 @@ public class MainActivity extends AppCompatActivity {
                     getString(R.string.notifies_every_15_minutes_to_stand_up_and_walk));
             mNotificationManager.createNotificationChannel(notificationChannel);
         }
-    }
-
-    private void deliverNotification(Context context) {
-        Intent contentIntent = new Intent(context, MainActivity.class);
-        PendingIntent contentPendingIntent = PendingIntent.getActivity(context,
-                NOTIFICATION_ID, contentIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        NotificationCompat.Builder builder =
-                new NotificationCompat.Builder(context, PRIMARY_CHANNEL_ID)
-                        .setSmallIcon(R.drawable.ic_stand_up)
-                        .setContentTitle(getString(R.string.stand_up_alert))
-                        .setContentText(getString(R.string.you_should_stand_up))
-                        .setContentIntent(contentPendingIntent)
-                        .setPriority(NotificationCompat.PRIORITY_HIGH)
-                        .setAutoCancel(true)
-                        .setDefaults(NotificationCompat.DEFAULT_ALL);
-
-        mNotificationManager.notify(NOTIFICATION_ID, builder.build());
     }
 }
