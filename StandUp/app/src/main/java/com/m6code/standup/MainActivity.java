@@ -13,12 +13,19 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
+    private NotificationManager mNotificationManager;
+    private static final int NOTIFICATION_ID = 0;
+    private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         ToggleButton alarmToggle = findViewById(R.id.alarmToggle);
 
+        Button showNextAlarm = findViewById(R.id.showNextAlarm);
+
         alarmToggle.setChecked(alarmUp);
 
         alarmToggle.setOnCheckedChangeListener((buttonView, isChecked) -> {
             String toastMsg;
             if (isChecked) {
+                // Fixme: use setAlarmClock method on the alarmManager to enable getNextAlarmClock() to work
                 // Set the toast message for the "on" case.
                 long repeatInterval = AlarmManager.INTERVAL_FIFTEEN_MINUTES;
                 long triggerTime = SystemClock.elapsedRealtime() + repeatInterval;
@@ -62,12 +72,19 @@ public class MainActivity extends AppCompatActivity {
             // Show a toast to say the alarm is turned on or off.
             Toast.makeText(MainActivity.this, toastMsg, Toast.LENGTH_SHORT).show();
         });
+
+        showNextAlarm.setOnClickListener(view -> {
+            if (alarmManager.getNextAlarmClock() != null) {
+                long nextAlarmTime = alarmManager.getNextAlarmClock().getTriggerTime();
+                PendingIntent nextIntent = alarmManager.getNextAlarmClock().getShowIntent();
+                Toast.makeText(this, String.format(Locale.ENGLISH, "Next Alarm time : %d Pending Intent : %s ", nextAlarmTime, nextIntent), Toast.LENGTH_SHORT).show();
+            } else
+                Toast.makeText(this, "Error Null value for getNextAlarmClock()", Toast.LENGTH_SHORT).show();
+
+        });
+
         createNotificationChannel();
     }
-
-    private NotificationManager mNotificationManager;
-    private static final int NOTIFICATION_ID = 0;
-    private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
 
     public void createNotificationChannel() {
         // Create a notification manager object.
