@@ -1,5 +1,6 @@
 package com.m6code.materialmeroom2.ui;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.m6code.materialmeroom2.R;
 import com.m6code.materialmeroom2.model.Sport;
 
@@ -35,7 +38,6 @@ public class SportsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_sport, container, false);
         mRecyclerView = root.findViewById(R.id.recyclerView);
         mSportsViewModel = new ViewModelProvider(this).get(SportsViewModel.class);
-
         // Get gridColumnCount
         int gridCount = getResources().getInteger(R.integer.grid_column_count);
         mAdapter = new SportsAdapter(getContext());
@@ -63,12 +65,26 @@ public class SportsFragment extends Fragment {
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 // Delete item from list
                 // Delete sport from database on swipe left or right
-                mSportsViewModel.delete(mAdapter.getSportAtPosition(viewHolder.getAdapterPosition()));
-                Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
+                Sport sport = mAdapter.getSportAtPosition(viewHolder.getAdapterPosition());
+                int position = viewHolder.getAdapterPosition();
+                mSportsViewModel.delete(sport);
 
+                //Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
 //                mSportsData.remove(viewHolder.getAdapterPosition());
+
                 // Animate the deletion property
-                mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+//                mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+                mAdapter.removeSport(position);
+
+                Snackbar.make(root, sport.getTitle() + " Deleted from Database",
+                        Snackbar.LENGTH_LONG)
+                        .setAction("Undo", view -> {
+                            // Undo delete
+                            mAdapter.restoreSport(position, sport);
+                            mSportsViewModel.insert(sport);
+                        })
+                        .setActionTextColor(Color.YELLOW)
+                        .show();
             }
         });
 

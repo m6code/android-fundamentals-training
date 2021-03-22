@@ -54,6 +54,18 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewH
         notifyDataSetChanged();
     }
 
+    // Remove an item from list and notify adapter
+    public void removeSport(int pos){
+        mSportsData.remove(pos);
+        notifyItemRemoved(pos);
+    }
+
+    // Restore removed item to list
+    public void restoreSport(int pos, Sport sport){
+        mSportsData.add(pos, sport);
+        notifyItemInserted(pos);
+    }
+
     // Get the Sport at a position
     public Sport getSportAtPosition(int pos) {
         return mSportsData.get(pos);
